@@ -1,23 +1,83 @@
-import React from 'react'
-import { Image, StyleSheet, ImageStyle, ViewStyle, SafeAreaView } from 'react-native'
-import AppScreen from '../../components/AppScreen'
+import React from "react";
+import {
+	Text,
+	View,
+	Image,
+	StyleSheet,
+	ImageStyle,
+	ViewStyle,
+	SafeAreaView,
+	TextStyle,
+	TouchableOpacity,
+} from "react-native";
+
+import Colors from "../../styles/Colors";
 
 const WelcomeScreen: React.VFC = () => (
-    <AppScreen>
-        <Image resizeMode='contain' style={styles.image} source={require('../../assets/images/logo.jpg')} />
-    </AppScreen>
-)
+	<SafeAreaView style={styles.contentContainer}>
+		<View style={styles.imageContainer}>
+			<Image
+				resizeMode="contain"
+				style={styles.image}
+				source={require("../../assets/images/logo.jpg")}
+			/>
+		</View>
+		<View style={styles.languageRowContainer}>
+			<TouchableOpacity style={styles.languageContainer}>
+				<Text style={styles.text}>LV</Text>
+			</TouchableOpacity>
+			<TouchableOpacity style={styles.languageContainer}>
+				<Text style={styles.text}>RU</Text>
+			</TouchableOpacity>
+			<TouchableOpacity style={styles.languageContainer}>
+				<Text style={styles.text}>EN</Text>
+			</TouchableOpacity>
+		</View>
+	</SafeAreaView>
+);
 
 interface Style {
-    image: ImageStyle
+	contentContainer: ViewStyle;
+	imageContainer: ViewStyle;
+	image: ImageStyle;
+	languageRowContainer: ViewStyle;
+	languageContainer: ViewStyle;
+	text: TextStyle;
 }
 
 const stylesObj: Style = {
-    image: {
-        width: '100%', //TODO: define in pixels and add height
-    }
-}
+	contentContainer: {
+		flex: 1,
+		backgroundColor: Colors.PRIMARY,
+	},
+	imageContainer: {
+		marginTop: 20,
+	},
+	image: {
+		width: "100%",
+		height: 106, //TODO: make proper scale
+	},
+	languageRowContainer: {
+		flexDirection: "row",
+		justifyContent: "space-evenly",
+		alignItems: "center",
+		marginTop: 400,
+	},
+	languageContainer: {
+		width: 80,
+		height: 80,
+		marginHorizontal: 10,
+		justifyContent: "center",
+		alignItems: "center",
+		borderBottomWidth: 2,
+		borderBottomColor: Colors.SECONDARY,
+	},
+	text: {
+		fontSize: 40,
+		color: Colors.SECONDARY,
+	},
+};
 
-const styles = StyleSheet.create<Style>(stylesObj)
+const styles = StyleSheet.create<Style>(stylesObj);
 
-export default WelcomeScreen
+export default WelcomeScreen;
