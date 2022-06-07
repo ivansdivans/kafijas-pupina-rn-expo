@@ -1,8 +1,11 @@
-import React from 'react'
-import AppScreen from './src/components/AppScreen'
+import React from "react";
+
+import WelcomeScreen from "./src/screens/WelcomeScreen";
+import NewOrderScreen from "./src/screens/HomeStack/NewOrderScreen";
 
 export default function App() {
   return (
-    <AppScreen />
+    <WelcomeScreen />
+    // <NewOrderScreen />
   );
 }

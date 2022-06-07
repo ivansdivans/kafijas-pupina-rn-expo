@@ -1,25 +1,46 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { StatusBar } from 'expo-status-bar'
+import React from "react";
+import { View, StyleSheet, ViewStyle, SafeAreaView } from "react-native";
 
-import Colors from '../helpers/Colors'
+import Colors from "../../src/styles/Colors";
 
-const AppScreen = () => {
-    return (
-        <View style={styles.container}>
-            <Text>Open up App.tsx to start working on your app!</Text>
-            <StatusBar style="auto" />
-        </View>
-    )
+interface Props {
+	children: React.ReactNode;
+	safeAreaViewBackgroundColor?: string;
+	additionalStyles?: ViewStyle;
 }
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: Colors.secondary,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
+const AppScreen: React.VFC<Props> = ({
+	children,
+	safeAreaViewBackgroundColor,
+	additionalStyles,
+}) => (
+	//Known issue: SafeAreaView currently only applicable to iOS devices with iOS version 11 or later
+	<SafeAreaView
+		style={[
+			styles.safeAreaView,
+			{ backgroundColor: safeAreaViewBackgroundColor },
+		]}
+	>
+		<View style={[styles.contentContainer, additionalStyles]}>{children}</View>
+	</SafeAreaView>
+);
 
-export default AppScreen
+interface Style {
+	safeAreaView: ViewStyle;
+	contentContainer: ViewStyle;
+}
+
+const stylesObj: Style = {
+	safeAreaView: {
+		flex: 1,
+		backgroundColor: Colors.SECONDARY,
+	},
+	contentContainer: {
+		flex: 1,
+		paddingHorizontal: 20, //TODO: move to constants inside "styles"
+	},
+};
+
+const styles = StyleSheet.create<Style>(stylesObj);
+
+export default AppScreen;
