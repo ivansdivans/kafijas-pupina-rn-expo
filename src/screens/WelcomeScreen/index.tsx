@@ -22,16 +22,18 @@ const WelcomeScreen: React.VFC = () => (
 				source={require("../../assets/images/logo.jpg")}
 			/>
 		</View>
-		<View style={styles.languageRowContainer}>
-			<TouchableOpacity style={styles.languageContainer}>
-				<Text style={styles.text}>LV</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.languageContainer}>
-				<Text style={styles.text}>RU</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.languageContainer}>
-				<Text style={styles.text}>EN</Text>
-			</TouchableOpacity>
+		<View style={styles.languageContentContainer}>
+			<View style={styles.languageRowContainer}>
+				<TouchableOpacity style={styles.languageContainer}>
+					<Text style={styles.text}>LV</Text>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.languageContainer}>
+					<Text style={styles.text}>RU</Text>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.languageContainer}>
+					<Text style={styles.text}>EN</Text>
+				</TouchableOpacity>
+			</View>
 		</View>
 	</SafeAreaView>
 );
@@ -40,6 +42,7 @@ interface Style {
 	contentContainer: ViewStyle;
 	imageContainer: ViewStyle;
 	image: ImageStyle;
+	languageContentContainer: ViewStyle;
 	languageRowContainer: ViewStyle;
 	languageContainer: ViewStyle;
 	text: TextStyle;
@@ -57,11 +60,15 @@ const stylesObj: Style = {
 		width: "100%",
 		height: 106, //TODO: make proper scale
 	},
+	languageContentContainer: {
+		flex: 1,
+		justifyContent: "flex-end",
+		bottom: 100,
+	},
 	languageRowContainer: {
 		flexDirection: "row",
 		justifyContent: "space-evenly",
 		alignItems: "center",
-		marginTop: 400,
 	},
 	languageContainer: {
 		width: 80,
