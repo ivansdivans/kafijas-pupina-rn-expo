@@ -24,7 +24,11 @@ const RootStackNavigation: React.VFC = () => {
 					options={{ headerShown: false }}
 				/>
 			) : (
-				<RootStack.Screen name="MainStack" component={MainStackNavigation} />
+				<RootStack.Screen
+					name="MainStack"
+					component={MainStackNavigation}
+					options={{ headerShown: false }}
+				/>
 			)}
 		</RootStack.Navigator>
 	);

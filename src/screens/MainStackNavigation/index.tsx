@@ -7,6 +7,7 @@ import ProductsListScreen from "./ProductsListScreen";
 export type MainStackParamList = {
 	CategoriesList: undefined;
 	ProductsList: {
+		categoryName: string;
 		productsListId: number;
 	};
 };
@@ -19,8 +20,15 @@ const MainStackNavigation: React.VFC = () => {
 			<MainStack.Screen
 				name="CategoriesList"
 				component={CategoriesListScreen}
+				options={{ title: "Categories" }}
 			/>
-			<MainStack.Screen name="ProductsList" component={ProductsListScreen} />
+			<MainStack.Screen
+				name="ProductsList"
+				component={ProductsListScreen}
+				options={({ route }) => ({
+					title: `${route.params.categoryName} products`,
+				})}
+			/>
 		</MainStack.Navigator>
 	);
 };

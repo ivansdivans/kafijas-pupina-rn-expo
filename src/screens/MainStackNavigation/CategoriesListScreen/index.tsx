@@ -25,7 +25,10 @@ const CategoriesListScreen: React.VFC = () => {
 			>
 				<TouchableOpacity
 					onPress={() =>
-						navigation.navigate("ProductsList", { productsListId: 1 })
+						navigation.navigate("ProductsList", {
+							categoryName: "Coffee",
+							productsListId: 1,
+						})
 					}
 				>
 					<Text>Coffee</Text>
@@ -33,7 +36,10 @@ const CategoriesListScreen: React.VFC = () => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					onPress={() =>
-						navigation.navigate("ProductsList", { productsListId: 2 })
+						navigation.navigate("ProductsList", {
+							categoryName: "Tea",
+							productsListId: 2,
+						})
 					}
 				>
 					<Text>Tea</Text>

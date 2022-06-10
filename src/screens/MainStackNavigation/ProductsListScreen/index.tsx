@@ -10,6 +10,7 @@ const ProductsListScreen: React.VFC = () => {
 	return (
 		<View>
 			<Text>ProductsListScreen</Text>
+			<Text>categoryName {route.params.categoryName}</Text>
 			<Text>productsListId {route.params.productsListId}</Text>
 		</View>
 	);
