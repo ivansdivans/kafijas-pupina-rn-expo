@@ -6,7 +6,7 @@ import RootStackNavigation from "./src/screens/RootStackNavigation";
 
 const App = () => (
 	<NavigationContainer>
-		<StatusBar barStyle="dark-content" />
+		<StatusBar barStyle="light-content" />
 		<RootStackNavigation />
 	</NavigationContainer>
 );

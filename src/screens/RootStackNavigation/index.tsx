@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import WelcomeScreen from "../WelcomeScreen";
 import MainStackNavigation from "../MainStackNavigation";
+import Colors from "../../styles/Colors";
 
 export type RootStackParamList = {
 	Welcome: undefined;

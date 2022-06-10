@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import CategoriesListScreen from "./CategoriesListScreen";
 import ProductsListScreen from "./ProductsListScreen";
+import Colors from "../../styles/Colors";
 
 export type MainStackParamList = {
 	CategoriesList: undefined;
@@ -16,7 +17,14 @@ const MainStack = createNativeStackNavigator<MainStackParamList>();
 
 const MainStackNavigation: React.VFC = () => {
 	return (
-		<MainStack.Navigator>
+		<MainStack.Navigator
+			screenOptions={{
+				headerStyle: {
+					backgroundColor: Colors.PRIMARY,
+				},
+				headerTintColor: Colors.SECONDARY,
+			}}
+		>
 			<MainStack.Screen
 				name="CategoriesList"
 				component={CategoriesListScreen}
