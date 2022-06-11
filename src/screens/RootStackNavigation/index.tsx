@@ -22,13 +22,13 @@ const RootStackNavigation: React.VFC = () => {
 				<RootStack.Screen
 					name="Welcome"
 					component={WelcomeScreen}
-					options={{ headerShown: false }}
+					options={{ headerShown: false }} //TODO: do I need this? already have in BottomTabsNavigation
 				/>
 			) : (
 				<RootStack.Screen
 					name="MainStack"
 					component={MainStackNavigation}
-					options={{ headerShown: false }}
+					options={{ headerShown: false }} //TODO: do I need this? already have in BottomTabsNavigation
 				/>
 			)}
 		</RootStack.Navigator>
