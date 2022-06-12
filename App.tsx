@@ -1,11 +1,14 @@
 import React from "react";
+import { StatusBar } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 
-import WelcomeScreen from "./src/screens/WelcomeScreen";
-import NewOrderScreen from "./src/screens/HomeStack/NewOrderScreen";
+import BottomTabsNavigation from "./src/screens/BottomTabsNavigation";
 
-export default function App() {
-  return (
-    <WelcomeScreen />
-    // <NewOrderScreen />
-  );
-}
+const App = () => (
+	<NavigationContainer>
+		<StatusBar barStyle="light-content" />
+		<BottomTabsNavigation />
+	</NavigationContainer>
+);
+
+export default App;
