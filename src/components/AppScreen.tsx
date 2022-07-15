@@ -37,7 +37,7 @@ const stylesObj: Style = {
 	},
 	contentContainer: {
 		flex: 1,
-		paddingHorizontal: 20, //TODO: move to constants inside "styles"
+		paddingHorizontal: 10, //TODO: move to constants inside "styles"
 	},
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, ViewStyle, StyleSheet } from "react-native";
 import { RouteProp, useRoute } from "@react-navigation/native";
 
 import { MainStackParamList } from "../index";
@@ -11,7 +11,7 @@ const ProductsListScreen: React.VFC = () => {
 
 	return (
 		<AppScreen>
-			<ScrollView>
+			<ScrollView style={styles.scrollView}>
 				{route.params.products.map((product) => (
 					<ListItem
 						key={product.id}
@@ -27,5 +27,18 @@ const ProductsListScreen: React.VFC = () => {
 		</AppScreen>
 	);
 };
+
+interface Style {
+	scrollView: ViewStyle;
+}
+
+const stylesObj: Style = {
+	scrollView: {
+		marginTop: 10,
+		paddingHorizontal: 10,
+	},
+};
+
+const styles = StyleSheet.create<Style>(stylesObj);
 
 export default ProductsListScreen;

@@ -74,15 +74,17 @@ const stylesObj: Style = {
 		shadowColor: Colors.SHADOW,
 		// iOS
 		shadowOffset: {
-			width: 10,
-			height: 10,
+			width: 5,
+			height: 5,
 		},
 		shadowOpacity: 0.1,
-		shadowRadius: 10,
+		shadowRadius: 5,
 	},
 	pictureBlock: {
 		width: "30%",
 		height: 100,
+		alignSelf: "flex-start",
+		marginTop: 5,
 	},
 	image: {
 		width: 80,
@@ -93,10 +95,10 @@ const stylesObj: Style = {
 		height: "100%",
 	},
 	title: {
-		fontSize: 30,
+		fontSize: 24,
 	},
 	description: {
-		fontSize: 10,
+		fontSize: 12,
 	},
 	priceContainer: {
 		flexDirection: "row",
@@ -104,11 +106,11 @@ const stylesObj: Style = {
 		marginTop: 10,
 	},
 	priceText: {
-		fontSize: 20,
+		fontSize: 18,
 		fontWeight: "bold",
 	},
 	discountPriceText: {
-		fontSize: 20,
+		fontSize: 18,
 		fontWeight: "bold",
 		fontStyle: "italic",
 		marginLeft: 10,
