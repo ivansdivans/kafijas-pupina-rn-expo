@@ -13,7 +13,7 @@ const ShopNavigationButton: React.VFC<Props> = ({ onPress }) => (
 		<View style={styles.container}>
 			<MaterialCommunityIcons
 				name="shopping"
-				color={Colors.PACKAGE}
+				color={Colors.SECONDARY}
 				size={35}
 			/>
 		</View>
@@ -29,7 +29,7 @@ const stylesObj: Style = {
 	container: {
 		backgroundColor: Colors.PRIMARY,
 		borderRadius: 40,
-		borderColor: Colors.PACKAGE,
+		borderColor: Colors.SECONDARY,
 		borderWidth: 10,
 		height: 80,
 		width: 80,

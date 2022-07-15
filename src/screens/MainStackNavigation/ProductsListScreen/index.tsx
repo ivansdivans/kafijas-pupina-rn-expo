@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { ScrollView } from "react-native";
 import { RouteProp, useRoute } from "@react-navigation/native";
 
 import { MainStackParamList } from "../index";
@@ -11,17 +11,19 @@ const ProductsListScreen: React.VFC = () => {
 
 	return (
 		<AppScreen>
-			{route.params.products.map((product) => (
-				<ListItem
-					key={product.id}
-					onPress={() => console.log("List item pressed")}
-					imageSource={product.imageSource}
-					title={product.title}
-					description={product.description}
-					price={product.price}
-					discount={product.discount}
-				/>
-			))}
+			<ScrollView>
+				{route.params.products.map((product) => (
+					<ListItem
+						key={product.id}
+						onPress={() => console.log("List item pressed")}
+						imageSource={product.imageSource}
+						title={product.title}
+						description={product.description}
+						price={product.price}
+						discount={product.discount}
+					/>
+				))}
+			</ScrollView>
 		</AppScreen>
 	);
 };

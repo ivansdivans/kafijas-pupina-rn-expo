@@ -7,6 +7,7 @@ import {
 	ViewStyle,
 	StyleSheet,
 	TextStyle,
+	ImageStyle,
 } from "react-native";
 
 import Colors from "../styles/Colors";
@@ -30,11 +31,7 @@ const ListItem: React.VFC<Props> = ({
 }) => (
 	<TouchableOpacity style={styles.container} onPress={onPress}>
 		<View style={styles.pictureBlock}>
-			<Image
-				style={{ width: 80, height: 80 }}
-				source={imageSource}
-				resizeMode="contain"
-			/>
+			<Image style={styles.image} source={imageSource} resizeMode="contain" />
 		</View>
 		<View style={styles.textBlock}>
 			<Text style={styles.title}>{title}</Text>
@@ -54,6 +51,7 @@ const ListItem: React.VFC<Props> = ({
 interface Style {
 	container: ViewStyle;
 	pictureBlock: ViewStyle;
+	image: ImageStyle;
 	textBlock: ViewStyle;
 	title: TextStyle;
 	description: TextStyle;
@@ -69,7 +67,7 @@ const stylesObj: Style = {
 		marginVertical: 10,
 		padding: 10,
 		borderRadius: 10,
-		backgroundColor: Colors.SECONDARY,
+		backgroundColor: Colors.PACKAGE,
 		flexDirection: "row",
 		alignItems: "center",
 		// Android
@@ -85,6 +83,10 @@ const stylesObj: Style = {
 	pictureBlock: {
 		width: "30%",
 		height: 100,
+	},
+	image: {
+		width: 80,
+		height: 80,
 	},
 	textBlock: {
 		width: "70%",
