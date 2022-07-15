@@ -10,6 +10,7 @@ import AppIcon from "../../../components/AppIcon";
 //TODO: create file with mock response and pass whole product item in navigation
 const COFFEE_PRODUCTS = [
 	{
+		id: 1,
 		imageSource: require("./../../../assets/images/colombia.jpg"),
 		title: "Colombia",
 		description:
@@ -21,6 +22,7 @@ const COFFEE_PRODUCTS = [
 
 const TEA_PRODUCTS = [
 	{
+		id: 1,
 		imageSource: require("./../../../assets/images/strawberry-melna.jpg"),
 		title: "Strawberry, melnā aromatizētā tēja",
 		description:

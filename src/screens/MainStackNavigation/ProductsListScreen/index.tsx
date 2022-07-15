@@ -11,17 +11,17 @@ const ProductsListScreen: React.VFC = () => {
 
 	return (
 		<AppScreen>
-			<Text>ProductsListScreen</Text>
-			<Text>categoryName {route.params.categoryName}</Text>
-			<Text>productsListId {route.params.productsListId}</Text>
-			<ListItem
-				onPress={() => console.log("List item pressed")}
-				imageSource={route.params.products[0].imageSource}
-				title={route.params.products[0].title}
-				description={route.params.products[0].description}
-				price={route.params.products[0].price}
-				discount={route.params.products[0].discount}
-			/>
+			{route.params.products.map((product) => (
+				<ListItem
+					key={product.id}
+					onPress={() => console.log("List item pressed")}
+					imageSource={product.imageSource}
+					title={product.title}
+					description={product.description}
+					price={product.price}
+					discount={product.discount}
+				/>
+			))}
 		</AppScreen>
 	);
 };
