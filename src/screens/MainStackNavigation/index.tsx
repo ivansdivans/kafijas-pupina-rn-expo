@@ -10,6 +10,14 @@ export type MainStackParamList = {
 	ProductsList: {
 		categoryName: string;
 		productsListId: number;
+		products: {
+			id: number;
+			imageSource: any; //TODO
+			title: string;
+			description: string;
+			price: string;
+			discount: string;
+		}[];
 	};
 };
 
