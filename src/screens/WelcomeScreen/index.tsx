@@ -51,7 +51,7 @@ interface Style {
 const stylesObj: Style = {
 	contentContainer: {
 		flex: 1,
-		backgroundColor: Colors.PRIMARY,
+		backgroundColor: Colors.Primary,
 	},
 	imageContainer: {
 		marginTop: 20,
@@ -77,11 +77,11 @@ const stylesObj: Style = {
 		justifyContent: "center",
 		alignItems: "center",
 		borderBottomWidth: 2,
-		borderBottomColor: Colors.SECONDARY,
+		borderBottomColor: Colors.Secondary,
 	},
 	text: {
 		fontSize: 40,
-		color: Colors.SECONDARY,
+		color: Colors.Secondary,
 	},
 };
 

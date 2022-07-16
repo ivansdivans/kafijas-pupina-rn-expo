@@ -67,11 +67,11 @@ const stylesObj: Style = {
 		marginVertical: 10,
 		padding: 10,
 		borderRadius: 10,
-		backgroundColor: Colors.PACKAGE,
+		backgroundColor: Colors.Package,
 		flexDirection: "row",
 		alignItems: "center",
 		// Android
-		shadowColor: Colors.SHADOW,
+		shadowColor: Colors.Shadow,
 		// iOS
 		shadowOffset: {
 			width: 5,
@@ -114,7 +114,7 @@ const stylesObj: Style = {
 		fontWeight: "bold",
 		fontStyle: "italic",
 		marginLeft: 10,
-		color: Colors.ACCENT,
+		color: Colors.Accent,
 	},
 };
 

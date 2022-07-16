@@ -33,7 +33,7 @@ interface Style {
 const stylesObj: Style = {
 	safeAreaView: {
 		flex: 1,
-		backgroundColor: Colors.SECONDARY,
+		backgroundColor: Colors.Secondary,
 	},
 	contentContainer: {
 		flex: 1,
