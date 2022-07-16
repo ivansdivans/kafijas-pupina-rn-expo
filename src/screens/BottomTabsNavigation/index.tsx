@@ -21,9 +21,9 @@ const BottomTabsNavigation: React.VFC = () => {
 		<BottomTabs.Navigator
 			initialRouteName="Shop"
 			screenOptions={{
-				tabBarStyle: { backgroundColor: Colors.SECONDARY },
-				tabBarActiveTintColor: Colors.PRIMARY,
-				tabBarInactiveTintColor: Colors.GREY,
+				tabBarStyle: { backgroundColor: Colors.Secondary },
+				tabBarActiveTintColor: Colors.Primary,
+				tabBarInactiveTintColor: Colors.Grey,
 				headerShown: false,
 			}}
 		>

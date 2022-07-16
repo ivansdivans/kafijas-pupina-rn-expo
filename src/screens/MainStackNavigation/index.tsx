@@ -28,9 +28,9 @@ const MainStackNavigation: React.VFC = () => {
 		<MainStack.Navigator
 			screenOptions={{
 				headerStyle: {
-					backgroundColor: Colors.PRIMARY,
+					backgroundColor: Colors.Primary,
 				},
-				headerTintColor: Colors.SECONDARY,
+				headerTintColor: Colors.Secondary,
 			}}
 		>
 			<MainStack.Screen

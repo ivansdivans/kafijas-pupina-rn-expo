@@ -15,9 +15,9 @@ const BlogStackNavigation: React.VFC = () => {
 		<BlogStack.Navigator
 			screenOptions={{
 				headerStyle: {
-					backgroundColor: Colors.PRIMARY,
+					backgroundColor: Colors.Primary,
 				},
-				headerTintColor: Colors.SECONDARY,
+				headerTintColor: Colors.Secondary,
 			}}
 		>
 			<BlogStack.Screen name="Blog" component={BlogScreen} />

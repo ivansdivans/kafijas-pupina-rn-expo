@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, ViewStyle, SafeAreaView } from "react-native";
 
+import appStyles from "../styles/Application";
 import Colors from "../../src/styles/Colors";
 
 interface Props {
@@ -32,11 +33,11 @@ interface Style {
 
 const stylesObj: Style = {
 	safeAreaView: {
-		flex: 1,
-		backgroundColor: Colors.SECONDARY,
+		...appStyles.fullSize,
+		backgroundColor: Colors.Secondary,
 	},
 	contentContainer: {
-		flex: 1,
+		...appStyles.fullSize,
 		paddingHorizontal: 10, //TODO: move to constants inside "styles"
 	},
 };

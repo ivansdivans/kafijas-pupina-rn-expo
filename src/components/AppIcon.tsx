@@ -14,8 +14,8 @@ interface Props {
 const AppIcon: React.VFC<Props> = ({
 	name,
 	size = 40,
-	backgroundColor = Colors.PRIMARY,
-	iconColor = Colors.SECONDARY,
+	backgroundColor = Colors.Primary,
+	iconColor = Colors.Secondary,
 }) => (
 	<View
 		style={{

@@ -6,6 +6,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { ProfileStackParamList } from "../index";
 import AppScreen from "../../../components/AppScreen";
 import AppIcon from "../../../components/AppIcon";
+import appStyles from "../../../styles/Application";
 
 const ProfileScreen: React.VFC = () => {
 	// const navigation =
@@ -18,8 +19,7 @@ const ProfileScreen: React.VFC = () => {
 			<Text>ProfileScreen</Text>
 			<View
 				style={{
-					flexDirection: "row",
-					alignItems: "center",
+					...appStyles.inlineContainer,
 					marginHorizontal: 20,
 					marginVertical: 20,
 				}}
@@ -29,8 +29,7 @@ const ProfileScreen: React.VFC = () => {
 			</View>
 			<View
 				style={{
-					flexDirection: "row",
-					alignItems: "center",
+					...appStyles.inlineContainer,
 					marginHorizontal: 20,
 					marginVertical: 20,
 				}}

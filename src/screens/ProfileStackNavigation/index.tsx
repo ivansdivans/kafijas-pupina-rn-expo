@@ -15,9 +15,9 @@ const ProfileStackNavigation: React.VFC = () => {
 		<ProfileStack.Navigator
 			screenOptions={{
 				headerStyle: {
-					backgroundColor: Colors.PRIMARY,
+					backgroundColor: Colors.Primary,
 				},
-				headerTintColor: Colors.SECONDARY,
+				headerTintColor: Colors.Secondary,
 			}}
 		>
 			<ProfileStack.Screen name="Profile" component={ProfileScreen} />

@@ -6,6 +6,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { BlogStackParamList } from "..";
 import AppScreen from "../../../components/AppScreen";
 import AppIcon from "../../../components/AppIcon";
+import appStyles from "../../../styles/Application";
 
 const BlogScreen: React.VFC = () => {
 	// const navigation =
@@ -18,8 +19,7 @@ const BlogScreen: React.VFC = () => {
 			<Text>BlogScreen</Text>
 			<View
 				style={{
-					flexDirection: "row",
-					alignItems: "center",
+					...appStyles.inlineContainer,
 					marginHorizontal: 20,
 					marginVertical: 20,
 				}}

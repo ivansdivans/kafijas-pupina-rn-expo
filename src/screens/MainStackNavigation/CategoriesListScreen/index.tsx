@@ -6,6 +6,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { MainStackParamList } from "../index";
 import AppScreen from "../../../components/AppScreen";
 import AppIcon from "../../../components/AppIcon";
+import appStyles from "../../../styles/Application";
 
 //TODO: create file with mock response and pass whole product item in navigation
 const COFFEE_PRODUCTS = [
@@ -79,9 +80,8 @@ const CategoriesListScreen: React.VFC = () => {
 			<Text>Select the product you would like to shop</Text>
 			<View
 				style={{
-					flexDirection: "row",
+					...appStyles.inlineContainer,
 					justifyContent: "center",
-					alignItems: "center",
 				}}
 			>
 				<TouchableOpacity
