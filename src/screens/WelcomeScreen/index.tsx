@@ -11,6 +11,7 @@ import {
 	TouchableOpacity,
 } from "react-native";
 
+import appStyles from "../../styles/Application";
 import Colors from "../../styles/Colors";
 
 const WelcomeScreen: React.VFC = () => (
@@ -57,7 +58,7 @@ const stylesObj: Style = {
 		marginTop: 20,
 	},
 	image: {
-		width: "100%",
+		...appStyles.fullWidth,
 		height: 106, //TODO: make proper scale
 	},
 	languageContentContainer: {
@@ -66,9 +67,8 @@ const stylesObj: Style = {
 		bottom: 100,
 	},
 	languageRowContainer: {
-		flexDirection: "row",
+		...appStyles.inlineContainer,
 		justifyContent: "space-evenly",
-		alignItems: "center",
 	},
 	languageContainer: {
 		width: 80,

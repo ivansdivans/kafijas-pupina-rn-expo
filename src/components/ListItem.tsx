@@ -10,6 +10,7 @@ import {
 	ImageStyle,
 } from "react-native";
 
+import appStyles from "../styles/Application";
 import Colors from "../styles/Colors";
 
 interface Props {
@@ -62,23 +63,14 @@ interface Style {
 
 const stylesObj: Style = {
 	container: {
-		width: "100%",
+		...appStyles.fullWidth,
+		...appStyles.inlineContainer,
 		minHeight: 50,
 		marginVertical: 10,
 		padding: 10,
 		borderRadius: 10,
 		backgroundColor: Colors.Package,
-		flexDirection: "row",
-		alignItems: "center",
-		// Android
-		shadowColor: Colors.Shadow,
-		// iOS
-		shadowOffset: {
-			width: 5,
-			height: 5,
-		},
-		shadowOpacity: 0.1,
-		shadowRadius: 5,
+		...appStyles.shadow,
 	},
 	pictureBlock: {
 		width: "30%",
@@ -101,8 +93,7 @@ const stylesObj: Style = {
 		fontSize: 12,
 	},
 	priceContainer: {
-		flexDirection: "row",
-		alignItems: "center",
+		...appStyles.inlineContainer,
 		marginTop: 10,
 	},
 	priceText: {
