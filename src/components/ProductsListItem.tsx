@@ -22,7 +22,7 @@ interface Props {
 	discount?: string;
 }
 
-const ListItem: React.VFC<Props> = ({
+const ProductsListItem: React.VFC<Props> = ({
 	onPress,
 	imageSource,
 	title,
@@ -111,4 +111,4 @@ const stylesObj: Style = {
 
 const styles = StyleSheet.create<Style>(stylesObj);
 
-export default ListItem;
+export default ProductsListItem;
