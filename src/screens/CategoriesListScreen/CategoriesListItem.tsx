@@ -8,8 +8,8 @@ import {
 	TextStyle,
 } from "react-native";
 
-import AppIcon from "./AppIcon";
-import appStyles from "../styles/Application";
+import AppIcon from "../../components/AppIcon";
+import appStyles from "../../styles/Application";
 
 interface Props {
 	onPress: () => void;

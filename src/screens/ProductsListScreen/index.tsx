@@ -2,9 +2,9 @@ import React from "react";
 import { ScrollView, ViewStyle, StyleSheet } from "react-native";
 import { RouteProp, useRoute } from "@react-navigation/native";
 
-import { MainStackParamList } from "../index";
-import AppScreen from "../../../components/AppScreen";
-import ProductsListItem from "../../../components/ProductsListItem";
+import AppScreen from "../../components/AppScreen";
+import { MainStackParamList } from "../../navigation/AppNavigator/MainStackNavigation/index";
+import ProductsListItem from "./ProductsListItem";
 
 const ProductsListScreen: React.VFC = () => {
 	const route = useRoute<RouteProp<MainStackParamList, "ProductsList">>();

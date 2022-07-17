@@ -14,30 +14,34 @@ import {
 import appStyles from "../../styles/Application";
 import Colors from "../../styles/Colors";
 
-const WelcomeScreen: React.VFC = () => (
-	<SafeAreaView style={styles.contentContainer}>
-		<View style={styles.imageContainer}>
-			<Image
-				resizeMode="contain"
-				style={styles.image}
-				source={require("../../assets/images/logo.jpg")}
-			/>
-		</View>
-		<View style={styles.languageContentContainer}>
-			<View style={styles.languageRowContainer}>
-				<TouchableOpacity style={styles.languageContainer}>
-					<Text style={styles.text}>LV</Text>
-				</TouchableOpacity>
-				<TouchableOpacity style={styles.languageContainer}>
-					<Text style={styles.text}>RU</Text>
-				</TouchableOpacity>
-				<TouchableOpacity style={styles.languageContainer}>
-					<Text style={styles.text}>EN</Text>
-				</TouchableOpacity>
+const WelcomeScreen: React.VFC = () => {
+	//TODO: implement const onLanguagePress - callback that returns isNewUser true
+
+	return (
+		<SafeAreaView style={styles.contentContainer}>
+			<View style={styles.imageContainer}>
+				<Image
+					resizeMode="contain"
+					style={styles.image}
+					source={require("../../assets/images/logo.jpg")}
+				/>
 			</View>
-		</View>
-	</SafeAreaView>
-);
+			<View style={styles.languageContentContainer}>
+				<View style={styles.languageRowContainer}>
+					<TouchableOpacity style={styles.languageContainer}>
+						<Text style={styles.text}>LV</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.languageContainer}>
+						<Text style={styles.text}>RU</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.languageContainer}>
+						<Text style={styles.text}>EN</Text>
+					</TouchableOpacity>
+				</View>
+			</View>
+		</SafeAreaView>
+	);
+};
 
 interface Style {
 	contentContainer: ViewStyle;

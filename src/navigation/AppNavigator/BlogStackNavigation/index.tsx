@@ -1,8 +1,8 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import BlogScreen from "./BlogScreen";
-import Colors from "../../styles/Colors";
+import BlogScreen from "../../../screens/BlogScreen";
+import Colors from "../../../styles/Colors";
 
 export type BlogStackParamList = {
 	Blog: undefined;
