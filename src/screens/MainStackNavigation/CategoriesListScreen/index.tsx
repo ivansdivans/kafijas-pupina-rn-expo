@@ -1,12 +1,19 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import {
+	View,
+	Text,
+	StyleSheet,
+	TextStyle,
+	ScrollView,
+	ViewStyle,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-import { MainStackParamList } from "../index";
 import AppScreen from "../../../components/AppScreen";
-import AppIcon from "../../../components/AppIcon";
 import appStyles from "../../../styles/Application";
+import CategoriesListItem from "../../../components/CategoriesListItem";
+import { MainStackParamList } from "../index";
 
 //TODO: create file with mock response and pass whole product item in navigation
 const COFFEE_PRODUCTS = [
@@ -69,6 +76,21 @@ const TEA_PRODUCTS = [
 	},
 ];
 
+const CATEGORIES = [
+	{
+		id: 1,
+		categoryName: "Coffee",
+		categoryIconName: "seed",
+		products: COFFEE_PRODUCTS,
+	},
+	{
+		id: 2,
+		categoryName: "Tea",
+		categoryIconName: "leaf",
+		products: TEA_PRODUCTS,
+	},
+];
+
 const CategoriesListScreen: React.VFC = () => {
 	const navigation =
 		useNavigation<
@@ -77,40 +99,43 @@ const CategoriesListScreen: React.VFC = () => {
 
 	return (
 		<AppScreen>
-			<Text>Select the product you would like to shop</Text>
-			<View
-				style={{
-					...appStyles.inlineContainer,
-					justifyContent: "center",
-				}}
-			>
-				<TouchableOpacity
-					onPress={() =>
-						navigation.navigate("ProductsList", {
-							categoryName: "Coffee",
-							productsListId: 1,
-							products: COFFEE_PRODUCTS,
-						})
-					}
-				>
-					<Text>Coffee</Text>
-					<AppIcon name="coffee" size={50} />
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() =>
-						navigation.navigate("ProductsList", {
-							categoryName: "Tea",
-							productsListId: 2,
-							products: TEA_PRODUCTS,
-						})
-					}
-				>
-					<Text>Tea</Text>
-					<AppIcon name="tea" size={50} />
-				</TouchableOpacity>
-			</View>
+			<ScrollView style={appStyles.fullSize}>
+				<View style={styles.titleContainer}>
+					<Text style={styles.title}>Select category to start order</Text>
+				</View>
+				{CATEGORIES.map((category) => (
+					<CategoriesListItem
+						key={category.id}
+						onPress={() =>
+							navigation.navigate("ProductsList", {
+								categoryName: category.categoryName,
+								products: category.products,
+							})
+						}
+						iconName={category.categoryIconName}
+						categoryName={category.categoryName}
+					/>
+				))}
+			</ScrollView>
 		</AppScreen>
 	);
 };
+
+interface Style {
+	titleContainer: ViewStyle;
+	title: TextStyle;
+}
+
+const stylesObj: Style = {
+	titleContainer: {
+		marginVertical: 20,
+		alignItems: "center",
+	},
+	title: {
+		fontSize: 18,
+	},
+};
+
+const styles = StyleSheet.create<Style>(stylesObj);
 
 export default CategoriesListScreen;

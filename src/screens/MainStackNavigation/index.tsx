@@ -9,7 +9,6 @@ export type MainStackParamList = {
 	CategoriesList: undefined;
 	ProductsList: {
 		categoryName: string;
-		productsListId: number;
 		products: {
 			id: number;
 			imageSource: any; //TODO

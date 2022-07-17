@@ -4,7 +4,7 @@ import { RouteProp, useRoute } from "@react-navigation/native";
 
 import { MainStackParamList } from "../index";
 import AppScreen from "../../../components/AppScreen";
-import ListItem from "../../../components/ListItem";
+import ProductsListItem from "../../../components/ProductsListItem";
 
 const ProductsListScreen: React.VFC = () => {
 	const route = useRoute<RouteProp<MainStackParamList, "ProductsList">>();
@@ -13,7 +13,7 @@ const ProductsListScreen: React.VFC = () => {
 		<AppScreen>
 			<ScrollView style={styles.scrollView}>
 				{route.params.products.map((product) => (
-					<ListItem
+					<ProductsListItem
 						key={product.id}
 						onPress={() => console.log("List item pressed")}
 						imageSource={product.imageSource}
