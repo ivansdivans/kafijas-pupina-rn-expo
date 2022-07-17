@@ -3,10 +3,10 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-import { ProfileStackParamList } from "../index";
-import AppScreen from "../../../components/AppScreen";
-import AppIcon from "../../../components/AppIcon";
-import appStyles from "../../../styles/Application";
+import AppScreen from "../../components/AppScreen";
+import AppIcon from "../../components/AppIcon";
+import appStyles from "../../styles/Application";
+import { ProfileStackParamList } from "../../navigation/AppNavigator/ProfileStackNavigation/index";
 
 const ProfileScreen: React.VFC = () => {
 	// const navigation =

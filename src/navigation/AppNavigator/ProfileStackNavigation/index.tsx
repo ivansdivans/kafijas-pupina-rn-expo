@@ -1,8 +1,8 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import ProfileScreen from "./ProfileScreen";
-import Colors from "../../styles/Colors";
+import ProfileScreen from "../../../screens/ProfileScreen";
+import Colors from "../../../styles/Colors";
 
 export type ProfileStackParamList = {
 	Profile: undefined;

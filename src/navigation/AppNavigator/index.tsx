@@ -2,11 +2,12 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import RootStackNavigation from "../RootStackNavigation";
-import ProfileStackNavigation from "../ProfileStackNavigation";
+import BlogStackNavigation from "./BlogStackNavigation";
+import MainStackNavigation from "./MainStackNavigation";
+import ProfileStackNavigation from "./ProfileStackNavigation";
+
 import Colors from "../../styles/Colors";
 import ShopNavigationButton from "./ShopNavigationButton";
-import BlogStackNavigation from "../BlogStackNavigation";
 
 export type BottomTabsParamList = {
 	BlogStack: undefined;
@@ -16,7 +17,7 @@ export type BottomTabsParamList = {
 
 const BottomTabs = createBottomTabNavigator<BottomTabsParamList>();
 
-const BottomTabsNavigation: React.VFC = () => {
+const AppNavigator: React.VFC = () => {
 	return (
 		<BottomTabs.Navigator
 			initialRouteName="Shop"
@@ -39,7 +40,7 @@ const BottomTabsNavigation: React.VFC = () => {
 			/>
 			<BottomTabs.Screen
 				name="Shop"
-				component={RootStackNavigation}
+				component={MainStackNavigation}
 				options={({ navigation }) => ({
 					tabBarButton: () => (
 						<ShopNavigationButton onPress={() => navigation.navigate("Shop")} />
@@ -60,4 +61,4 @@ const BottomTabsNavigation: React.VFC = () => {
 	);
 };
 
-export default BottomTabsNavigation;
+export default AppNavigator;

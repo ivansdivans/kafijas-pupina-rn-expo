@@ -3,10 +3,10 @@ import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-import { BlogStackParamList } from "..";
-import AppScreen from "../../../components/AppScreen";
-import AppIcon from "../../../components/AppIcon";
-import appStyles from "../../../styles/Application";
+import AppIcon from "../../components/AppIcon";
+import AppScreen from "../../components/AppScreen";
+import appStyles from "../../styles/Application";
+import { BlogStackParamList } from "../../navigation/AppNavigator/BlogStackNavigation";
 
 const BlogScreen: React.VFC = () => {
 	// const navigation =

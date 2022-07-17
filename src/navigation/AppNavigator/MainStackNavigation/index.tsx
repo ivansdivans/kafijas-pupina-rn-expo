@@ -1,9 +1,10 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import CategoriesListScreen from "./CategoriesListScreen";
-import ProductsListScreen from "./ProductsListScreen";
-import Colors from "../../styles/Colors";
+import CategoriesListScreen from "../../../screens/CategoriesListScreen";
+import ProductsListScreen from "../../../screens/ProductsListScreen";
+
+import Colors from "../../../styles/Colors";
 
 export type MainStackParamList = {
 	CategoriesList: undefined;

@@ -10,8 +10,8 @@ import {
 	ImageStyle,
 } from "react-native";
 
-import appStyles from "../styles/Application";
-import Colors from "../styles/Colors";
+import appStyles from "../../styles/Application";
+import Colors from "../../styles/Colors";
 
 interface Props {
 	onPress: () => void;
