@@ -38,7 +38,7 @@ const stylesObj: Style = {
 	},
 	contentContainer: {
 		...appStyles.fullSize,
-		paddingHorizontal: 10, //TODO: move to constants inside "styles"
+		paddingHorizontal: 20,
 	},
 };
 

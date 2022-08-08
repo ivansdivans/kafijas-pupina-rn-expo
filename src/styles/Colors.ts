@@ -6,6 +6,7 @@ enum Colors {
 	Accent = "#f76e2f",
 	Package = "#f9e9de",
 	Shadow = "#755351",
+	Text = "#313131",
 
 	Black = "#000",
 	Grey = "#414141",
