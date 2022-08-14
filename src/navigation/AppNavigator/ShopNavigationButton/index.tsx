@@ -8,6 +8,7 @@ interface Props {
 	onPress: () => void;
 }
 
+//TODO: move to components folder
 const ShopNavigationButton: React.VFC<Props> = ({ onPress }) => (
 	<TouchableOpacity onPress={onPress}>
 		<View style={styles.container}>
