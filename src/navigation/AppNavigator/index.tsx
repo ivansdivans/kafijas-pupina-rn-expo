@@ -7,7 +7,7 @@ import MainStackNavigation from "./MainStackNavigation";
 import ProfileStackNavigation from "./ProfileStackNavigation";
 
 import Colors from "../../styles/Colors";
-import ShopNavigationButton from "./ShopNavigationButton";
+import ShopNavigationButton from "../../components/ShopNavigationButton";
 
 export type BottomTabsParamList = {
 	BlogStack: undefined;

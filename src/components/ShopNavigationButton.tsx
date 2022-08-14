@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, ViewStyle, TouchableOpacity } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import Colors from "../../../styles/Colors";
+import Colors from "../styles/Colors";
 
 interface Props {
 	onPress: () => void;
