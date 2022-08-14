@@ -1,5 +1,12 @@
 import React from "react";
-import { View, ViewStyle, TextStyle, StyleSheet, Image } from "react-native";
+import {
+	View,
+	ViewStyle,
+	TextStyle,
+	StyleSheet,
+	Image,
+	ImageStyle,
+} from "react-native";
 
 import AppScreen from "../../components/AppScreen";
 import AppIcon from "../../components/AppIcon";
@@ -21,7 +28,7 @@ const ProfileScreen: React.VFC = () => (
 	<AppScreen>
 		<View style={styles.avatarContainer}>
 			<Image
-				style={{ height: 80, width: 80, marginRight: 20 }}
+				style={styles.avatarImage}
 				source={require("../../assets/images/avatar.png")}
 			/>
 			<H2>{PROFILE.name}</H2>
@@ -67,6 +74,7 @@ const ProfileScreen: React.VFC = () => (
 
 interface Style {
 	avatarContainer: ViewStyle;
+	avatarImage: ImageStyle;
 	profileText: TextStyle;
 	aboutUsRowContainer: ViewStyle;
 	aboutUsText: TextStyle;
@@ -76,6 +84,11 @@ const stylesObj: Style = {
 	avatarContainer: {
 		...appStyles.inlineContainer,
 		marginTop: 20,
+	},
+	avatarImage: {
+		height: 80,
+		width: 80,
+		marginRight: 20,
 	},
 	profileText: {
 		marginVertical: 5,
