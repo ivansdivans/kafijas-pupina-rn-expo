@@ -4,7 +4,7 @@ import Colors from "../styles/Colors";
 
 interface Props {
 	height?: number;
-	lineColor?: "string";
+	lineColor?: string;
 }
 
 const SeparatorLine: React.VFC<Props> = ({

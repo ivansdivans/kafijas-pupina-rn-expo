@@ -1,5 +1,13 @@
 import React from "react";
-import { View, ViewStyle, TextStyle, StyleSheet, Image } from "react-native";
+import {
+	View,
+	ViewStyle,
+	TextStyle,
+	StyleSheet,
+	Image,
+	ImageStyle,
+	ScrollView,
+} from "react-native";
 
 import AppScreen from "../../components/AppScreen";
 import AppIcon from "../../components/AppIcon";
@@ -19,54 +27,57 @@ const PROFILE = {
 
 const ProfileScreen: React.VFC = () => (
 	<AppScreen>
-		<View style={styles.avatarContainer}>
-			<Image
-				style={{ height: 80, width: 80, marginRight: 20 }}
-				source={require("../../assets/images/avatar.png")}
-			/>
-			<H2>{PROFILE.name}</H2>
-		</View>
-		<Separator height={10} />
-		<View>
-			<H2>My contact details</H2>
-			<Separator height={10} />
-			<P style={styles.profileText}>phone: {PROFILE.phone}</P>
-			<P style={styles.profileText}>email: {PROFILE.email}</P>
-		</View>
-		<SeparatorLine height={20} />
-		<View>
-			<H2>Contact us</H2>
-			<Separator height={10} />
-			<View style={styles.aboutUsRowContainer}>
-				<AppIcon name="clock" size={40} />
-				<P style={styles.aboutUsText}>9:00-18:00</P>
-			</View>
-			<View style={styles.aboutUsRowContainer}>
-				<AppIcon name="clock" size={40} />
-				<LinkText
-					text={"+371 67377844"}
-					onPress={() => openPhoneUrl("+371 67377844")}
-					style={styles.aboutUsText}
+		<ScrollView style={appStyles.fullSize}>
+			<View style={styles.avatarContainer}>
+				<Image
+					style={styles.avatarImage}
+					source={require("../../assets/images/avatar.png")}
 				/>
+				<H2>{PROFILE.name}</H2>
 			</View>
-			<View style={styles.aboutUsRowContainer}>
-				<AppIcon name="mail" size={40} />
-				<LinkText
-					text={"info@kafijaspupina.lv"}
-					onPress={() => openEmailUrl("info@kafijaspupina.lv")}
-					style={styles.aboutUsText}
-				/>
+			<Separator height={10} />
+			<View>
+				<H2>My contact details</H2>
+				<Separator height={10} />
+				<P style={styles.profileText}>phone: {PROFILE.phone}</P>
+				<P style={styles.profileText}>email: {PROFILE.email}</P>
 			</View>
-			<View style={styles.aboutUsRowContainer}>
-				<AppIcon name="google-maps" size={40} />
-				<P style={styles.aboutUsText}>Plieņciema iela 5, Mārupe, LV-2167</P>
+			<SeparatorLine height={20} />
+			<View>
+				<H2>Contact us</H2>
+				<Separator height={10} />
+				<View style={styles.aboutUsRowContainer}>
+					<AppIcon name="clock" size={40} />
+					<P style={styles.aboutUsText}>9:00-18:00</P>
+				</View>
+				<View style={styles.aboutUsRowContainer}>
+					<AppIcon name="clock" size={40} />
+					<LinkText
+						text={"+371 67377844"}
+						onPress={() => openPhoneUrl("+371 67377844")}
+						style={styles.aboutUsText}
+					/>
+				</View>
+				<View style={styles.aboutUsRowContainer}>
+					<AppIcon name="mail" size={40} />
+					<LinkText
+						text={"info@kafijaspupina.lv"}
+						onPress={() => openEmailUrl("info@kafijaspupina.lv")}
+						style={styles.aboutUsText}
+					/>
+				</View>
+				<View style={styles.aboutUsRowContainer}>
+					<AppIcon name="google-maps" size={40} />
+					<P style={styles.aboutUsText}>Plieņciema iela 5, Mārupe, LV-2167</P>
+				</View>
 			</View>
-		</View>
+		</ScrollView>
 	</AppScreen>
 );
 
 interface Style {
 	avatarContainer: ViewStyle;
+	avatarImage: ImageStyle;
 	profileText: TextStyle;
 	aboutUsRowContainer: ViewStyle;
 	aboutUsText: TextStyle;
@@ -76,6 +87,11 @@ const stylesObj: Style = {
 	avatarContainer: {
 		...appStyles.inlineContainer,
 		marginTop: 20,
+	},
+	avatarImage: {
+		height: 80,
+		width: 80,
+		marginRight: 20,
 	},
 	profileText: {
 		marginVertical: 5,
